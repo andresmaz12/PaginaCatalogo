@@ -1,6 +1,6 @@
 # Pagina para catalogos de negocios
 
-## Enlace a la pagina 
+## Enlace a la pagina
 ### https://pagina-catalogo-nvfc.vercel.app/
 
 ## Descripción

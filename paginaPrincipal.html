@@ -49,26 +49,25 @@
         </nav>
 
         <main class="main-content">
-            <section class="search-section">
-            <div class="container">
-                <div class="search-filters">
-                <input type="text" id="search" placeholder="Buscar por nombre..." aria-label="Buscar producto">
-                <select id="marca">
-                    <option value="">Todas las Marcas</option>
+            <div class="filtros">
+                <select id="filtro-anio">
+                    <option value="">Todos los años</option>
                 </select>
-                <select id="año">
-                    <option value="">Todos los Años</option>
+                
+                <select id="filtro-categoria">
+                    <option value="">Todas las categorías</option>
                 </select>
-                <select id="modelo">
-                    <option value="">Todos los Modelos</option>
+                
+                <select id="filtro-marca">
+                    <option value="">Todas las marcas</option>
                 </select>
-                <button onclick="filtrarProductos()">Filtrar</button>
-                </div>
+                
+                <input type="text" id="buscador" placeholder="Buscar productos...">
             </div>
-            </section>
+                <p id="contador-productos"></p>
+            </div>
 
-            <section class="catalog container">
-            </section>
+            <div id="catalogo-container" class="catalogo-grid"></div>
         </main>
 
         <footer class="footer">
