@@ -1,0 +1,449 @@
+/* Reset básico y variables */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --font-main: 'Segoe UI', Roboto, sans-serif;
+  --spacing: 1rem;
+  --border-radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #f9f9f9;
+}
+
+/* Header styles */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo section - Tamaño y disposición */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.logo-img {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* User section */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+.profile {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover, 
+.navbar a[aria-current="page"] {
+  background-color: var(--secondary-color);
+}
+
+/* Menú hamburguesa para móviles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--light-color);
+}
+
+.footer-section p, 
+.footer-section address {
+  margin-bottom: 0.5rem;
+  font-style: normal;
+}
+
+.footer-section i {
+  margin-right: 8px;
+  color: var(--secondary-color);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .user-section {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .navbar {
+    display: none;
+    width: 100%;
+  }
+  
+  .navbar.active {
+    display: block;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+  }
+  
+  .footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Efectos de hover y focus para accesibilidad */
+a:focus, 
+button:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Animaciones suaves */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Estilos para el catalogo */
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.producto-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto-imagen {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.producto-card:hover .producto-imagen img {
+    transform: scale(1.05);
+}
+
+.stock-bajo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.producto-info {
+    padding: 15px;
+}
+
+.producto-info h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.producto-info .precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.producto-info .stock {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.btn-cotizar {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-cotizar:hover {
+    background: #2980b9;
+}
+
+.no-result {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+}
+
+.catalogo-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filtros select, .filtros input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#buscador {
+    min-width: 250px;
+}
+
+/* Estilo para el button cotizaciones */
+
+.buttonCotizaciones{
+  background-color: lightgreen ;
+  color: blanchedalmond;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Clases para accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Estilos para el footer móvil */
+.footer-mobile {
+    background: #FFFFFF;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    z-index: 100;
+    text-align: center;
+}
+
+.whatsapp-btn {
+    background: #268ae8;
+    font-size: 22px;
+    color: #FFFFFF;
+    border-radius: 15px;
+    margin-left: 0.5em;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+/* Estilos para navegación activa */
+.navbar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Footer móvil - Visible solo en móviles */
+.footer-mobile {
+    display: none; /* Oculta por defecto */
+    background: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 100;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.mobile-button {
+    background: #268ae8;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/* Mostrar solo en móviles (ancho menor a 768px) */
+@media (max-width: 767px) {
+    .footer-mobile {
+        display: block;
+    }
+    
+    /* Opcional: agregar espacio al final para que el footer no tape contenido */
+    body {
+        padding-bottom: 60px;
+    }
+}
+
+/* Footer normal - Ajustes para móviles */
+@media (max-width: 991px) { /* Ahora incluye tablets */
+    .footer-mobile {
+        display: block;
+    }
+}

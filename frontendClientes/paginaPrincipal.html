@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de Ejemplo - Especialistas en venta de repuestos y accesorios para vehículos con cotizaciones en línea.">
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <title>Pagina Ejemplo - Repuestos Automotrices</title>
+        <noscript>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        </noscript>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo-section">
+                    <img src="logo.jpg" loading="lazy" alt="Logo de Pagina de Ejemplo - Especialistas en repuestos automotrices" class="logo-img">
+                    <h1 class="logo">Pagina Ejemplo</h1>
+                </div>
+                <div class="user-section">
+                    <div class="social-links">
+                        <a href="https://facebook.com/autoparteselsapo" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Pagina de Ejemplo">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com/autoparteselsapo" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Pagina de Ejemplo">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/autoparteselsapo" target="_blank" rel="noopener noreferrer" aria-label="Twitter de Pagina de Ejemplo">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="profile" aria-label="Perfil de usuario">
+                        <a href="/manejopagina/ingreso.html" aria-label="Acceder al perfil">
+                            <i class="fas fa-user-circle" title="Perfil" aria-hidden="true"></i>
+                            <span class="sr-only">Perfil</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Menú principal" aria-expanded="false" aria-controls="main-nav">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+
+        <nav class="navbar" id="main-nav">
+            <ul>
+                <li><a href="paginaPrincipal.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="cotizaciones.html">Cotizaciones</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1 style="text-align: center;"> Bienvenido </h1>
+            <div class="filtros">
+                <label for="buscador" class="sr-only">Buscar productos</label>
+                <input type="text" id="buscador" placeholder="Buscar productos..." aria-label="Buscar productos">
+
+                <label for="filtro-anio">Año del vehículo</label>
+                <select id="filtro-anio" aria-label="Filtrar por año">
+                    <option value="">Todos los años</option>
+                    <!-- Opciones deberían generarse dinámicamente -->
+                </select>
+                
+                <label for="filtro-categoria">Categoría</label>
+                <select id="filtro-categoria" aria-label="Filtrar por categoría">
+                    <option value="">Todas las categorías</option>
+                    <!-- Opciones deberían generarse dinámicamente -->
+                </select>
+                
+                <label for="filtro-marca">Marca</label>
+                <select id="filtro-marca" aria-label="Filtrar por marca">
+                    <option value="">Todas las marcas</option>
+                    <!-- Opciones deberían generarse dinámicamente -->
+                </select>
+            </div>
+            
+            <p id="contador-productos" aria-live="polite"></p>
+
+            <div id="catalogo-container" class="catalogo-grid" role="region" aria-label="Catálogo de productos">
+                <!-- Contenido del catálogo debería generarse dinámicamente -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-mobile">
+                <div class="mobile-menu">
+                    <a href="/" class="mobile-menu-item">
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                    <a href="/cotizaciones" class="mobile-menu-item">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>Cotizar</span>
+                    </a>
+                    <a href="/contacto" class="mobile-menu-item active">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Contacto</span>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-section">
+                    <h2>Contacto</h2>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dirección: Calle Principal #123</p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> Teléfono: (123) 456-7890</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> Email: info@autoparteselsapo.com</p>
+                    </address>
+                </div>
+                <div class="footer-section">
+                    <h2>Horario</h2>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> Lunes a Viernes: 9:00 - 18:00</p>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> Sábado: 9:00 - 14:00</p>
+                </div>
+                <div class="footer-section">
+                    <h2>Redes Sociales</h2>
+                    <div class="social-links">
+                        <a href="https://facebook.com/autoparteselsapo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com/autoparteselsapo" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/autoparteselsapo" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Pagina de Ejemplo. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+    <script type="module" src="js/index.js"></script>
+    <script nomodule src="js/legacy-bundle.js"></script>
+</html>
